@@ -1,0 +1,14 @@
+body {
+    color: #ff6700;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-shadow: 2px 2px #b54900;
+    
+}
