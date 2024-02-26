@@ -9,6 +9,18 @@ body {
 }
 
 h1 {
-    text-shadow: 2px 2px #b54900;
-    
+    text-shadow: 4px 2px #d65703;
+    font-size: 4rem;
+    animation-name: float;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+/* animations */
+@keyframes float {
+    0% {margin-bottom: 0;}
+    50% {margin-bottom: 1rem;}
+    100% {margin-bottom: 0;}
 }
