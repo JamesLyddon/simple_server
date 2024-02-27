@@ -16,10 +16,9 @@ div {
 }
 
 a {
-    /* border: #8BC6F5 4px solid; */
     background-color: #1D63ED;
     box-shadow: 3px 3px 1px 1px #8BC6F5;
-    color: #8BC6F5;
+    color: #E5F2FC;
     border-radius: 15px;
     padding: 15px 32px;
     text-align: center;
@@ -37,6 +36,10 @@ h1 {
     margin: 0;
     padding: 0;
     text-align: center;
+}
+
+img {
+    max-width: 200px;
 }
 
 .whale-icon {
@@ -80,9 +83,9 @@ p {
 
 /* animations */
 @keyframes float {
-    0% {top: 0;}
-    50% {top: 25px;}
-    100% {top: 0;}
+    0% {top: 0; opacity: 100%;}
+    50% {top: 25px; opacity: 60%;}
+    100% {top: 0; opacity: 100%;}
 }
 /* @keyframes float {
     0% {margin-top: 0;}

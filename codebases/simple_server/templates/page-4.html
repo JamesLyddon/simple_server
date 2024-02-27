@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+    <div>
+        <h1>
+            So is a container a virtual environment?
+        </h1>
+        <p>
+            Kind of but not quite. A Vitrual Environment is primarily used for creating an isolated environment to develop within wherease a container is more about <strong>bundling</strong> everything an app needs into a self contained package
+        </p>
+        <p>
+            Virtual environments virtualise the <strong>entire stack</strong> down to the kernal. Containers are more lightweight and virtualise less of the stack (down to the OS only). Containers are less about fencing off and more about creating a layer of abstraction around each different application to simplfy and standardise the host machine's duties
+        </p>
+        <a href="/page-4" class="float">Can you give me a terrible analogy?</a>
+    </div>
+  </div>
+{% endblock %}

@@ -7,11 +7,9 @@ app = Flask(__name__)
 def get_home():
     return render_template("welcome.html")
 
-@app.route('/intro')
-def get_intro():
-    return render_template("intro.html")
-
-
+@app.route('/page-<id>')
+def get_page(id):
+    return render_template(f"page-{id}.html")
 
 if __name__ == '__main__':
     app.run(

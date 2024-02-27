@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+    <div>
+        <p>
+            One solution to this problem is...
+        </p>
+        <h1>
+            CONTAINERS!
+        </h1>
+        <p>
+            Shipping containers are all built to the same size and specification - they can all be interacted with from outside identically no matter what's inside them
+        </p>
+        <p>
+            In a similar way we can create a virtual <strong>container</strong> for our application to "live" in. The machine hosting our site doesn't need to interact with our app and its environment direclty, it only has to worry about handling the <strong>container</strong> surrounding it - much like a crane operator only has to know how to connect, life, move, and disconnect their crane to a shipping container
+        </p>
+        <img src="https://1000logos.net/wp-content/uploads/2021/11/Docker-Logo-2013.png"/>
+        <p>
+            <strong>Docker</strong> is a platform that can build, run, and manage containers. When we want to host our app in the cloud we pick a host that supports docker, include a <strong>Dockerfile</strong> with instructions on how to build a container for our app (a bit like an .sql file builds and populates tables), and let the host handle it from there!
+        </p>
+        <a href="/page-3" class="float">Du go ng professor...</a>
+    </div>
+  </div>
+{% endblock %}
