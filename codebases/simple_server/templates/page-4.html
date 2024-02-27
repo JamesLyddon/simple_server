@@ -4,7 +4,7 @@
   <div>
     <div>
         <h1>
-            Of course!
+            Absolutely!
         </h1>
         <p>
             Suppose I have some pet fish that I want to give to a friend to look after at their house. To <strong>host</strong> them if you will.
@@ -21,15 +21,24 @@
         <p>
             After thinking long and hard I realise I can just send my friend instructions on how to build a fish tank and a reptile enclosure to put my pets in. They'll be identical glass boxes from the outside but house very different contents. Outside of following my instructions to build the 2 glass tanks and fill them with the right stuff my friend doesn't have to treat them any differently - they can sit on the same shelf together and his house doesn't need to be drastically divided up into different biomes
         </p>
-        <button class="huzzah">🎉</button>
+        <div class="button-wrapper">
+            <button class="huzzah">🐳</button>
+        </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
   <script>
     document.getElementsByClassName("huzzah")[0].addEventListener("click", (e) => {
         e.preventDefault()
-        console.log("huzzah")
-        confetti();
+        let canvas = document.createElement("canvas")
+        canvas.width = 600
+        canvas.height = 600
+        let container = document.getElementsByClassName("button-wrapper")[0]
+        container.appendChild(canvas)
+
+        let confetti_button = confetti.create(canvas)
+
+        confetti_button().then(() => container.removeChild(canvas))
     })
   </script>
 {% endblock %}

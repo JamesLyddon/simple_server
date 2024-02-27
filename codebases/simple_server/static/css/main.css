@@ -85,10 +85,19 @@ button {
     border-radius: 100px;
     border: none;
     background-color: #1D63ED;
-    padding-inline: 1.2rem;
+    padding-inline: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     box-shadow: 3px 3px 1px 1px #8BC6F5;
+    font-size: 3rem;
+}
+
+.button-wrapper canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    pointer-events: none;
 }
 
 /* animations */
@@ -97,8 +106,3 @@ button {
     50% {top: 25px; opacity: 60%;}
     100% {top: 0; opacity: 100%;}
 }
-/* @keyframes float {
-    0% {margin-top: 0;}
-    50% {margin-top: 1rem;}
-    100% {margin-top: 0;}
-} */
