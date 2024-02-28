@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+    <div>
+        <h1>
+            Absolutely!
+        </h1>
+        <p>
+            Suppose I have some pet fish that I want to give to a friend to look after at their house. To <strong>host</strong> them if you will.
+        </p>
+        <p>
+            Before I can send them over I have to make sure the environment in their house will allow my fish to survive. Fish need water and food so I'll ask my friend to flood their living room and fill it with fish food
+        </p>
+        <p>
+            Suppose I also have some reptiles I'd like my friend to look after. They'll need a dry environment with reptile food so I'll ask my friend to build a floodwall across his living room so the fish can have half and the reptiles can have the other
+        </p>
+        <p>
+            My friend wonders if this isn't a bit extreme and if there's not a simpler more lightweight solution to fencing off entire sections of their house into different environments
+        </p>
+        <p>
+            After thinking long and hard I realise I can just send my friend instructions on how to build a fish tank and a reptile enclosure to put my pets in. They'll be identical glass boxes from the outside but house very different contents. Outside of following my instructions to build the 2 glass tanks and fill them with the right stuff my friend doesn't have to treat them any differently - they can sit on the same shelf together and his house doesn't need to be drastically divided up into different biomes
+        </p>
+        <div class="button-wrapper">
+            <button class="huzzah">🐳</button>
+        </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script>
+    document.getElementsByClassName("huzzah")[0].addEventListener("click", (e) => {
+        e.preventDefault()
+        let canvas = document.createElement("canvas")
+        canvas.width = 600
+        canvas.height = 600
+        let container = document.getElementsByClassName("button-wrapper")[0]
+        container.appendChild(canvas)
+
+        let confetti_button = confetti.create(canvas)
+
+        confetti_button().then(() => container.removeChild(canvas))
+    })
+  </script>
+{% endblock %}
