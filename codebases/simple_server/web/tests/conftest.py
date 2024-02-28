@@ -1,5 +1,5 @@
 import pytest
-from app import app
+from codebases.simple_server.web.app import app
 
 @pytest.fixture
 def web_client():

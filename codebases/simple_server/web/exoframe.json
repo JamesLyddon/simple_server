@@ -1,5 +1,10 @@
 {
-  "name": "simple_server",
-  "domain": "jameslyddon-simple.xf.mkrs.link",
-  "port": "5000"
+  "name": "jameslyddon-message-web",
+  "domain": "jameslyddon-messages.xf.mkrs.link",
+  "port": 5000,
+  "env": {
+    "APP_ENV": "PRODUCTION",
+    "POSTGRES_HOSTNAME": "jameslyddon-message-database",
+    "POSTGRES_PASSWORD": "47378f40d8ff4bffdfc5b883ee4e250c0eeb26bb"
+  }
 }

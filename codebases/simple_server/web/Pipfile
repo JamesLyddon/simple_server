@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 pytest = "*"
 flask = "*"
+psycopg = "*"
+markupsafe = "*"
 
 [dev-packages]
 
