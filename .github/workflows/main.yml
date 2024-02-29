@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # First move to correct directory
+      - name: move to project folder
+        run: |
+          cd codebases/simple_server/web
+
       # Each step has a name, some code, and some options
       - name: Check out the code
         uses: actions/checkout@v3 # This is a reference to some code to run
@@ -24,7 +29,6 @@ jobs:
       # This step installs pip, pipenv, and our dependencies
       - name: Install dependencies
         run: | # Note that there's no reference here — just commands to run
-          cd codebases/simple_server/web
           python -m pip install --upgrade pip
           pip install pipenv
           pipenv install --dev
