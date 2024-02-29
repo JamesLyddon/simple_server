@@ -30,6 +30,6 @@ jobs:
 
       # Now we run our tests
       - name: Test with pytest
-        working-directory: codebases/simple_server/web # Set the working directory
+        # working-directory: codebases/simple_server/web # Set the working directory
         run: |
           pipenv run pytest
