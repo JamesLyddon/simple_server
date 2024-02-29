@@ -20,14 +20,11 @@ jobs:
         with:
           python-version: 3.11.0
 
-      # My addition - move to the correct folder from the root folder
-      - name: move to project folder
-        run: |
-          cd codebases/simple_server/web
-
+          
       # This step installs pip, pipenv, and our dependencies
       - name: Install dependencies
         run: | # Note that there's no reference here — just commands to run
+          cd codebases/simple_server/web
           python -m pip install --upgrade pip
           pip install pipenv
           pipenv install --dev
