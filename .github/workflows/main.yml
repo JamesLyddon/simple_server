@@ -34,4 +34,6 @@ jobs:
       - name: Test with pytest
         working-directory: codebases/simple_server/web # Set the working directory
         run: |
-          pipenv run pytest
+          cd codebases/simple_server/web # Navigate to the project directory
+          pipenv shell # Activate the virtual environment
+          pytest # Run pytest
