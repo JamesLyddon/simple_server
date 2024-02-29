@@ -5,6 +5,6 @@
   "env": {
     "APP_ENV": "PRODUCTION",
     "POSTGRES_HOSTNAME": "jameslyddon-message-database",
-    "POSTGRES_PASSWORD": "jameslyddon-postgres-password"
+    "POSTGRES_PASSWORD": "@jameslyddon-postgres-password"
   }
 }

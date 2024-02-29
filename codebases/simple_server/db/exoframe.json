@@ -4,7 +4,7 @@
     "hostname": "jameslyddon-message-database",
     "image": "postgres:12",
     "env": {
-      "POSTGRES_PASSWORD": "jameslyddon-postgres-password"
+      "POSTGRES_PASSWORD": "@jameslyddon-postgres-password"
     },
     "volumes": ["jameslyddon_message_database_volume:/var/lib/postgresql/data"]
   }
