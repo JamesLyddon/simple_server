@@ -13,6 +13,8 @@ jobs:
       # Each step has a name, some code, and some options
       - name: Check out the code
         uses: actions/checkout@v3 # This is a reference to some code to run
+        with:
+          path: codebases/simple_server/web # Set the path to the specific directory
 
       # This step installs the Python version we want
       - name: Set up Python 3.11.0
@@ -23,13 +25,13 @@ jobs:
       # This step installs pip, pipenv, and our dependencies
       - name: Install dependencies
         run: | # Note that there's no reference here — just commands to run
-          cd codebases/simple_server/web
           python -m pip install --upgrade pip
           pip install pipenv
           pipenv install --dev
+        working-directory: codebases/simple_server/web # Set the working directory
 
       # Now we run our tests
       - name: Test with pytest
         run: |
-          cd codebases/simple_server/web
           pipenv run pytest
+        working-directory: codebases/simple_server/web # Set the working directory
