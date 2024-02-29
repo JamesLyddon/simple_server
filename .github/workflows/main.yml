@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Each step has a name, some code, and some options
+      - name: Check out the code
+        uses: actions/checkout@v3 # This is a reference to some code to run
+
       # First move to correct directory
       - name: move to project folder
         run: |
           cd codebases/simple_server/web
-
-      # Each step has a name, some code, and some options
-      - name: Check out the code
-        uses: actions/checkout@v3 # This is a reference to some code to run
 
       # This step installs the Python version we want
       - name: Set up Python 3.11.0
