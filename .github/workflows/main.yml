@@ -23,6 +23,7 @@ jobs:
       # This step installs pip, pipenv, and our dependencies
       - name: Install dependencies
         run: | # Note that there's no reference here — just commands to run
+          cd codebases/simple_server/web
           python -m pip install --upgrade pip
           pip install pipenv
           pipenv install --dev
@@ -30,4 +31,5 @@ jobs:
       # Now we run our tests
       - name: Test with pytest
         run: |
+          cd codebases/simple_server/web
           pipenv run pytest
